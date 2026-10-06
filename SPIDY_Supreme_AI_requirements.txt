@@ -1,0 +1,88 @@
+# SPIDY Supreme AI — complete Python dependency list
+# Python: 3.11+
+# Install:
+#   python -m venv .venv
+#   .venv\Scripts\activate        # Windows
+#   python -m pip install --upgrade pip
+#   pip install -r SPIDY_Supreme_AI_requirements.txt
+#
+# Browser automation (after pip install):
+#   playwright install chromium
+#
+# Notes:
+# - The project has an offline/native brain and does NOT require a paid API key.
+# - Cloud provider SDKs are not required because the project uses HTTP APIs via httpx.
+# - Some heavy AI/media packages are used only by optional tools, but are included
+#   here so the full feature set can be installed from one file.
+
+# =========================
+# WEB API / SERVER
+# =========================
+fastapi>=0.115
+uvicorn>=0.30
+pydantic>=2.7
+httpx>=0.27
+python-multipart>=0.0.9
+jinja2>=3.1
+
+# =========================
+# RAG / SEARCH / DATA SCIENCE
+# =========================
+numpy>=1.26
+scipy>=1.11
+scikit-learn>=1.4
+rank-bm25>=0.2.2
+joblib>=1.3
+
+# =========================
+# WEB / DOCUMENT / IMAGE PROCESSING
+# =========================
+beautifulsoup4>=4.12
+lxml>=5.2
+pillow>=10.3
+pypdf>=5.0
+
+# =========================
+# LOCAL AI / EMBEDDINGS / IMAGE GENERATION
+# =========================
+torch>=2.2
+transformers>=4.40
+diffusers>=0.30
+sentence-transformers>=3.0
+accelerate>=0.30
+safetensors>=0.4
+
+# =========================
+# BROWSER AUTOMATION / SCREENSHOTS
+# =========================
+playwright>=1.45
+
+# =========================
+# CHART / VISUALIZATION
+# =========================
+matplotlib>=3.8
+
+# =========================
+# TESTING / DEVELOPMENT
+# =========================
+pytest>=8.0
+
+# =========================
+# OPTIONAL EXTERNAL RUNTIME SOFTWARE
+# =========================
+# These are NOT pip packages and must be installed separately only if you use them:
+#
+# Ollama:
+#   Install Ollama for Windows, then:
+#   ollama serve
+#   ollama pull qwen2.5-coder:7b
+#
+# llama.cpp:
+#   Run llama-server with your GGUF model.
+#
+# Git:
+#   Required only for git_* tools and repository workflows.
+#
+# Node.js:
+#   Only needed when using the run_node tool against a Node project.
+#   SPIDY itself does not require npm to start.
